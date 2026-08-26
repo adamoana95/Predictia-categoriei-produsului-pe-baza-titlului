@@ -4,7 +4,7 @@
   "metadata": {
     "colab": {
       "provenance": [],
-      "authorship_tag": "ABX9TyMfcgn0DHrK3MJh0kDxah0w",
+      "authorship_tag": "ABX9TyP4xaXmCGYcvdITVmUGyane",
       "include_colab_link": true
     },
     "kernelspec": {
@@ -175,29 +175,6 @@
         ")\n",
         "\n",
         "print(\"Model trained and saved successfully!\")"
-      ]
-    },
-    {
-      "cell_type": "code",
-      "source": [
-        "!git add train_model.py\n"
-      ],
-      "metadata": {
-        "colab": {
-          "base_uri": "https://localhost:8080/"
-        },
-        "id": "a2u8s8Vx6jB7",
-        "outputId": "41ec7d95-5193-4f6e-ec9d-5c20e9f9a95d"
-      },
-      "execution_count": 6,
-      "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": [
-            "fatal: not a git repository (or any of the parent directories): .git\n"
-          ]
-        }
       ]
     }
   ]
