@@ -4,7 +4,7 @@
   "metadata": {
     "colab": {
       "provenance": [],
-      "authorship_tag": "ABX9TyOrp9KRdwPaN7zPvvOwPJMT",
+      "authorship_tag": "ABX9TyMfcgn0DHrK3MJh0kDxah0w",
       "include_colab_link": true
     },
     "kernelspec": {
@@ -28,11 +28,23 @@
     },
     {
       "cell_type": "code",
-      "execution_count": null,
+      "execution_count": 4,
       "metadata": {
-        "id": "ganhdemD3Wk2"
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ganhdemD3Wk2",
+        "outputId": "ec86927e-be1f-4176-a567-3115dd779ffe"
       },
-      "outputs": [],
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Model trained and saved successfully!\n"
+          ]
+        }
+      ],
       "source": [
         "import os\n",
         "import re\n",
@@ -46,8 +58,10 @@
         "from sklearn.svm import LinearSVC\n",
         "\n",
         "\n",
-        "# Load dataset\n",
-        "df = pd.read_csv(\"data/products.csv\")\n",
+        "# Load dataset from GitHub\n",
+        "url = \"https://raw.githubusercontent.com/adamoana95/Predictia-categoriei-produsului-pe-baza-titlului/main/data/products.csv\"\n",
+        "\n",
+        "df = pd.read_csv(url)\n",
         "\n",
         "# Clean column names\n",
         "df.columns = df.columns.str.strip().str.replace('_', ' ', regex=False).str.lower()\n",
@@ -94,7 +108,7 @@
         "columns_to_drop = [\n",
         "    'product id',\n",
         "    'merchant id',\n",
-        "    ' product code',\n",
+        "    'product code',\n",
         "    'number of views',\n",
         "    'merchant rating',\n",
         "    'listing date'\n",
@@ -161,6 +175,29 @@
         ")\n",
         "\n",
         "print(\"Model trained and saved successfully!\")"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!git add train_model.py\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "a2u8s8Vx6jB7",
+        "outputId": "41ec7d95-5193-4f6e-ec9d-5c20e9f9a95d"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "fatal: not a git repository (or any of the parent directories): .git\n"
+          ]
+        }
       ]
     }
   ]
